@@ -10,9 +10,12 @@ def date_format(date):
     for pattern in date_patterns:
         try:
             datetime.strptime(date, pattern).date()
+            # Print debug information
+            print(f"Match:   time data '{date}' matches format '{pattern}'")
             return pattern
+            
         except ValueError as error:
             # Print for debugging only. Does not return anything
-            print(type(error), error)
+            print('Trying: ', error)
 
     return f'Error: could not recognize date format for "{date}"'
