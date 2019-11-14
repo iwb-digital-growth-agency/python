@@ -5,7 +5,7 @@ from datetime import datetime
 
 def date_format(date):
     '''Recognizes Dutch date formats like day/month/year'''
-    date_patterns = ['%d-%m-%Y', '%d/%m/%Y']
+    date_patterns = ['%d-%m-%Y', '%d-%m-%y', '%d/%m/%Y', '%d/%m%y']
 
     for pattern in date_patterns:
         try:
